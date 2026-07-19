@@ -1,6 +1,6 @@
 function redirectToCreateAccount() {
     // Redirect to the create account page
-    window.location.href = 'createaccount.html'; // Change this to your actual create account URL
+    window.location.href = 'CreateandLogin/createaccount.html';
 }
 
 function login() {
@@ -33,10 +33,10 @@ function login() {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Logging in...';
 
-    fetch('/CreateandLogin/login.html', {
+    fetch('CreateandLogin/login_handler.php', {
         method: 'POST',
         body: formData,
-        credentials: 'include' // This ensures cookies/session are sent
+        credentials: 'include'
     })
     .then(response => response.json())
     .then(data => {
@@ -53,7 +53,6 @@ function login() {
         errorDiv.textContent = 'Login failed. Please try again.';
     })
     .finally(() => {
-        // Restore button state
         submitBtn.disabled = false;
         submitBtn.textContent = originalBtnText;
     });
@@ -71,6 +70,7 @@ function createErrorDiv() {
     
     return errorDiv;
 }
+
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
     const loginError = document.getElementById('loginError');
@@ -79,33 +79,41 @@ document.addEventListener('DOMContentLoaded', function() {
     const passwordInput = document.querySelector('input[type="password"]');
     const showPasswordCheckbox = document.getElementById('showPassword');
     
-    showPasswordCheckbox.addEventListener('change', function() {
-        passwordInput.type = this.checked ? 'text' : 'password';
-    });
+    if (showPasswordCheckbox) {
+        showPasswordCheckbox.addEventListener('change', function() {
+            passwordInput.type = this.checked ? 'text' : 'password';
+        });
+    }
 
     // Handle form submission
-    loginForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const formData = new FormData(this);
-        
-        fetch('login_handler.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                window.location.href = data.redirect;
-            } else {
-                loginError.textContent = data.message;
-                loginError.style.display = 'block';
-            }
-        })
-        .catch(error => {
-            loginError.textContent = 'An error occurred. Please try again.';
-            loginError.style.display = 'block';
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch('CreateandLogin/login_handler.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = data.redirect;
+                } else {
+                    if (loginError) {
+                        loginError.textContent = data.message;
+                        loginError.style.display = 'block';
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                if (loginError) {
+                    loginError.textContent = 'An error occurred. Please try again.';
+                    loginError.style.display = 'block';
+                }
+            });
         });
-    });
+    }
 });
-
