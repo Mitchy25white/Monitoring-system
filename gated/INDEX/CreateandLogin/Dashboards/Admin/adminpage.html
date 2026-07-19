@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Gated Community Monitoring System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+  
+ 
+    <header>
+        <div class="logosec">
+            <div class="logo">Admin Dashboard<i class='bx bxs-shield-alt-2'></i></div>
+            <div class="menu" id="menuicn"><i class='bx bx-menu'></i></div>
+        </div>
+        <div class="searchbar">
+            <input type="text" placeholder="Search...">
+            <div class="searchbtn"><i class='bx bx-search-alt'></i></div>
+        </div>
+        <div class="message">
+            <div class="circle"></div>
+            <i class='bx bxs-bell'></i>
+            <div class="dp">
+                <img src="../assets/admin-avatar.png" alt="admin">
+            </div>
+        </div>
+    </header>
+
+<div class="main-container">
+        <div class="navcontainer">
+            <nav class="nav">
+                <div class="nav-upper-options">
+                    <div class="nav-option option1">
+                        <i class='bx bxs-dashboard'></i>
+                        <h3>Dashboard</h3>
+                    </div>
+                    <div class="nav-option option2">
+                        <i class='bx bxs-user-plus'></i>
+                        <h3>User Management</h3>
+                    </div>
+                    <div class="nav-option option3">
+                        <i class='bx bxs-shield'></i>
+                        <h3>Security</h3>
+                    </div>
+                    <div class="nav-option option4">
+                        <i class='bx bxs-group'></i>
+                        <h3>Guest Management</h3>
+                    </div>
+                    <div class="nav-option option5">
+                        <i class='bx bxs-cog'></i>
+                        <h3>Settings</h3>
+                    </div>
+                    <div class="nav-option option6">
+                        <i class='bx bxs-report'></i>
+                        <h3>Reports</h3>
+                    </div>
+                    <div class="nav-option logout">
+                        <i class='bx bxs-log-out'></i>
+                        <h3>Logout</h3>
+                    </div>
+                </div>
+            </nav>
+        </div>
+<main>
+  <div class="main">
+    <div class="report-container">
+        <div class="report-header">
+            <h1 class="recent-Articles">Dashboard Overview</h1>
+            <button class="view">View All</button>
+        </div>
+
+        <div class="report-body">
+            <div class="report-topic-heading">
+                <h3 class="t-op">System Statistics</h3>
+            </div>
+
+            <div class="items">
+                <div class="item1">
+                    <i class='bx bxs-user'></i>
+                    <h3 class="t-op-nextlvl">Total Users</h3>
+                    <span class="t-op-nextlvl">250</span>
+                </div>
+
+                <div class="item1">
+                    <i class='bx bxs-group'></i>
+                    <h3 class="t-op-nextlvl">Active Guests</h3>
+                    <span class="t-op-nextlvl">15</span>
+                </div>
+
+                <div class="item1">
+                    <i class='bx bxs-bell'></i>
+                    <h3 class="t-op-nextlvl">Alerts</h3>
+                    <span class="t-op-nextlvl">3</span>
+                </div>
+
+                <div class="item1">
+                    <i class='bx bxs-car'></i>
+                    <h3 class="t-op-nextlvl">Vehicles Today</h3>
+                    <span class="t-op-nextlvl">42</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="report-body">
+            <div class="report-topic-heading">
+                <h3 class="t-op">Recent Activity</h3>
+            </div>
+            <div id="activity-feed" class="items">
+                <!-- Activity items will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>  
+                    
+<script src="../dashboard.js"></script>
+
+
+</body>
+</html>

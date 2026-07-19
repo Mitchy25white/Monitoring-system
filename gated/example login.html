@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Create Account Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e61616;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: rgb(216, 88, 88);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(184, 98, 98, 0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+        .form {
+            padding: 20px;
+            display: none;
+        }
+        .form.active {
+            display: block;
+        }
+        .btn {
+            display: block;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form active" id="login-form">
+            <h2>Login</h2>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button class="btn" type="button" onclick="toggleForms()">Create Account</button>
+        </div>
+        <div class="form" id="create-account-form">
+            <h2>Create Account</h2>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button class="btn" type="button" onclick="toggleForms()">Login</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            const loginForm = document.getElementById('login-form');
+            const createAccountForm = document.getElementById('create-account-form');
+
+            loginForm.classList.toggle('active');
+            createAccountForm.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

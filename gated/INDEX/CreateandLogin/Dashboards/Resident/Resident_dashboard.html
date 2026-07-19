@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport" 
+          content="width=device-width, 
+                   initial-scale=1.0">
+    <title>Gated community monitoring system</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../dashboard.css">
+    <script src="../dashboard.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+  
+ 
+    <header>
+            <div class="logo">Gated Monitoring<i class='bx bxs-cctv'></i></div>
+            <div class="menu" id="menuicn" alt="menu-icon">
+            <i class='bx bx-menu'></i>
+            </div>
+        <div class="searchbar">
+            <input type="text" placeholder="Search"><i class='bx bx-search-alt'></i>
+            <button class="searchbtn">Search</button>
+              </div>
+        <div class="message">
+            <div class="circle"></div>
+            <div class="dp"></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="navcontainer">
+            <div class="nav">
+                <div class="nav-upper-options">
+    <div class="nav-option option1">
+        <i class='bx bx-laptop'></i><h3>Resident Dashboard</h3>
+    </div>
+    <div class="nav-option option2">
+        <i class='bx bx-group'></i><h3>Real-time Guest Activity</h3>
+    </div>
+    <div class="nav-option option3">
+        <i class='bx bxs-alarm-exclamation'></i><h3>Security Alerts</h3>
+    </div>
+    <div class="nav-option option4">
+        <i class='bx bxs-plus-square'></i>
+    <a href="Guest.html" >
+        <h3>Input Guest Information</h3>
+    </a>
+    </div>
+    <div class="nav-option option5">
+        <i class='bx bxs-user-circle'></i><h3>Profile</h3>
+    </div>
+    <div class="nav-option option6">
+        <i class='bx bx-cog'></i><h3>Settings</h3>
+    </div>
+    <div class="nav-option logout">
+        <a href="../logout.php" style="text-decoration: none; color: inherit;">
+            <i class='bx bx-log-out'></i><h3>Logout</h3>
+        </a>
+    </div>
+    </div>
+</div>
+    </div>
+<main>
+    <div class="report-header">
+        <h2>Monitoring Report</h2>
+        <p>Date: October 10, 2024</p>
+    </div>
+    <div class="report-1">
+        <div class="report-topic-heading">Analysis</div>
+        <div class="items">
+                <div class="item1">
+                    <div class="t-op">
+                        <i class='bx bx-group'></i>
+                        <h3>Real-time Guest Activity</h3></div>
+                    <div class="t-op-nextlvl">
+                        <ul id="activity-list">
+                        <!-- Guest activity list will be populated dynamically -->
+                   
+                            <li>Guest Fred entered at 10:00 AM</li>
+                            <li>Guest Brittney entered at 10:15 AM</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item1">
+                    <div class="t-op"> 
+                        <i class='bx bxs-alarm-exclamation'></i>
+                        <h3>Security Alerts</h3></div>
+                    <div class="t-op-nextlvl"><ul id="alert-list">
+                        <li>Alert: Unidentified vehicle detected at the main gate</li>
+                        <li>Alert: Motion detected in restricted area</li>
+                       
+                    </ul></div>
+                </div>
+              
+                </div>
+                </div>
+        </main>
+    </div>  
+                    
+                        <script src="../dashboard.js"></script>
+</body>
+</html>

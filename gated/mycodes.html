@@ -1,0 +1,66 @@
+<!-- creating a database in sql  -->
+CREATE DATABASE estateSecurity;
+
+<!-- switching to a databse in sql -->
+ USE databasename;
+ <!-- CREATING MYSQL TABLE -->
+ CREATE TABLE guest(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    firstName VARCHAR(50) NOT NULL, 
+    lastName VARCHAR(50) NOT NULL,
+    national_ID INT,
+    telephone INT NULL,
+    vehiclePlate VARCHAR(15) NULL,
+    purpose VARCHAR(255)
+    )
+<!-- CREATING RESIDENTS TABLE -->
+    CREATE TABLE resident(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    firstName VARCHAR(50) NOT NULL, 
+    lastName VARCHAR(50) NOT NULL,
+    national_ID INT,
+    telephone INT NULL,
+    email VARCHAR(50) NULL,
+    courtNo INT NOT NULL,
+    houseNo INT NOT NULL,
+    )
+    <!-- creating users table -->
+    CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE, 
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+
+    <!-- creating security table -->
+    CREATE TABLE security( id INT AUTO_INCREMENT PRIMARY KEY,
+    staffNo INT NOT NULL,
+    firstName VARCHAR(50) NOT NULL, 
+    lastName VARCHAR(50) NOT NULL,
+    national_ID INT,
+    dateOnDuty DATETIME DEFAULT CURRENT_TIMESTAMP,
+    rank VARCHAR(50) NOT NULL )
+
+    <!-- modifying table structure -->
+    use estateSecurity;
+    ALTER TABLE guest ADD COLUMN visitTime DATETIME DEFAULT CURRENT_TIMESTAMP AFTER national_ID;
+
+    <!-- adding records to mysql -->
+    USE estateSecurity;
+    INSERT INTO guest(firstName, lastName, national_ID, telephone, vehiclePlate, purpose) 
+    VALUES ('Mitchelle', 'Adhiambo', 378654 , 0702307411, 'KCF518J', 'Jumia Delivery');
+
+    <!-- update table values -->
+    UPDATE guest SET courtNo = 111, houseNo = 65 WHERE id = 1;
+<!-- HOME PAGE
+    index.html
+    about us
+    cafeteria_services 
+    gym services
+    Admin login.php
+    resident login.php -->
+    USE estateSecurity;
+    INSERT INTO guest(firstName, lastName, national_ID, telephone, vehiclePlate, purpose, CourtNo, houseNo) 
+    VALUES ('Fred', 'Omondi', 3345754 , 0789643391, 'KDK456G', 'Party', 111, 65);
+estate membership form

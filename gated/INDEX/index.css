@@ -1,0 +1,237 @@
+
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Times New Roman', Times, serif;
+    
+        }
+       
+      body {
+        background: url("Indeximg.jpg") no-repeat center center ; 
+        background-size: cover;
+        background-position: center;
+        backface-visibility: visible;
+        background-attachment: fixed;
+
+      }
+
+      .logo{
+        font-size: 40px;
+        color: #d1a6e0;
+        text-shadow: 0 0 15px #9b59b6, 0 0 30px #8e44ad; /* Neon glow effect */
+       user-select: none;
+       font-weight: 800;
+    }
+    
+    .navigation a{
+        font-size: 20px;
+        position: relative;
+        color: #ffff;
+        text-decoration: none;
+        font-weight: 500;
+        margin-inline-end: 40px;
+        display: inline-block;
+        
+    }
+
+footer {
+    background-color: rgba(38, 38, 38, 0.8); /* Semi-transparent dark footer */
+    color: #e0e0e0; /* Light gray text */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+    .navigation .btnlogin-popup{
+        text-decoration: underline;
+        margin-inline-end: 15px;
+        font-weight: 400;
+        display: inline-block;
+        text-decoration: none;
+        padding: 14px 40px;
+        color: #ffffff;
+        background-image: linear-gradient(45deg, #9b59b6, #8e44ad);
+        font-size: 20px;
+        border-radius: 30px;
+        border-top-right-radius: 0;
+        position: top right;
+        transition: background 0.3s;
+
+    }
+    .navigation a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    .main {
+        flex: 1;
+        padding: 20px;
+       
+    }
+    
+    h1 {
+        bottom: -6px;       
+        font-size: 30px;
+        text-align: center;
+        width: 100%;
+        color: #ffff;
+        text-shadow: 0 0 10px #9b59b6, 0 0 20px #8e44ad; /* Neon glow */
+        
+        
+    }
+    p {
+        font-size: 20px;
+        bottom: -6px;
+        width: 100%;
+        text-align: center;
+        color: #ffffff;
+        
+    }
+    .login-wrapper {
+        background: linear-gradient(135deg, #6c5ce7, #8e44ad); /* Colorful gradient background */
+    color: #ffffff; /* White text color */
+    backdrop-filter: blur(10px); /* Slight blur effect */
+    box-shadow: 0 0 20px rgba(108, 92, 231, 0.5); /* Soft shadow */
+    width: 100%; /* Full width */
+    max-width: 420px; /* Max width for the wrapper */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    margin: 20px auto; 
+        
+        }
+        .login-wrapper h1 {
+        font-size: 36px;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 20px;
+        }
+        
+        .login-wrapper .input-box{
+        position: relative;
+        width: 100%;
+        height: 50px;
+        margin: 20px 0;
+        }
+        
+        
+        input{
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        background: #2c2c2c;
+        box-sizing: border-box;
+        border: 2px solid  #9b59b6;
+        border-radius: 40px;
+        font-size: 16px;
+        color: #ffffff;
+        padding: 12px 45px;
+        padding-left: 45px;
+        }
+       
+        .login-input-box i {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: #ffffff;
+        pointer-events: none;
+
+        }
+        
+        .login-forgot{
+        display: flex;
+        justify-content: space-between;
+        text-align: right;
+        align-items: center;
+        font-size: 14.5px;
+        margin: -15px 0 15px;
+        color: #ffffff;
+        }
+        .login-forgot a:hover {
+        text-decoration: underline;
+        color: #9b59b6;
+        }
+        .login-wrapper .register-link {
+            text-align: center; 
+            margin-top: 15px; 
+        }
+        .button-btn-primary {
+            background-color: #d6a4e0; /* Light purple button color */
+            border: none; /* Remove border */
+        }
+        
+        .btn-primary:hover {
+            background-color: #b58cc0; /* Darker purple on hover */
+        }
+        #password {
+            width: 100%; /* Full width */
+            padding: 10px; /* Padding for comfort */
+            margin-bottom: 10px; /* Space below the input */
+            border: 1px solid #ccc; /* Light border */
+            border-radius: 4px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+        }
+        
+        /* Style for the checkbox and label */
+        #showPassword {
+            margin-right: 5px; /* Space between checkbox and label */
+        }
+        
+        .show-password-label {
+            font-size: 14px; /* Font size for the label */
+            color: #333; /* Dark text color */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        input[type="checkbox"] {
+            display: none; /* Hide the default checkbox */
+        }
+        
+        .custom-checkbox {
+            position: relative;
+            padding-left: 30px; /* Space for the custom checkbox */
+            cursor: pointer;
+            font-size: 14px; /* Adjust font size as needed */
+            color: #333; /* Text color */
+        }
+        
+        .custom-checkbox:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px; /* Width of the custom checkbox */
+            height: 20px; /* Height of the custom checkbox */
+            border: 2px solid #9b59b6; /* Border color */
+            border-radius: 4px; /* Rounded corners */
+            background-color: #fff; /* Background color */
+            transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+        }
+        
+        input[type="checkbox"]:checked + .custom-checkbox:before {
+            background-color: #9b59b6; /* Change background color when checked */
+            border-color: #8e44ad; /* Change border color when checked */
+        }
+        
+        input[type="checkbox"]:checked + .custom-checkbox:after {
+            content: '✔'; /* Checkmark */
+            position: absolute;
+            left: 5px; /* Position of the checkmark */
+            top: 50%;
+            transform: translateY(-50%);
+            color: white; /* Checkmark color */
+            font-size: 16px; /* Adjust size as needed */
+        }
+        
+        
+    
+ 
