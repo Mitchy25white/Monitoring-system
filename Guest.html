@@ -1,0 +1,107 @@
+<DOCTYPE html>
+    <html>
+    <head>
+    <title>GATED COMMUNITY GUEST FREE MOVEMENT MONITORING SYSTEM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  </head>
+    
+      <body>
+        <style>
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Times New Roman', Times, serif;
+    
+        }
+       
+      body {
+        background: url("download.gif") no-repeat; 
+        display: flex;
+        align-items: centre;
+        justify-content: center;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+      }
+    
+      .wrapper {
+      background-color: transparent;
+      border: 2px solid #010e1b;
+      /**color: #7efd02; **/
+      color: #ffffff;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 0 10px #6F71A1;
+      width: 420px;
+      height: auto;
+      border-radius: 10px;
+      padding: 80px;
+      }
+      .wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid #010e1b;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #0f101d;
+  padding: 20px 45px;
+}
+      </style>
+
+      <div class="wrapper">
+        <form action="postdata.php" method="POST">
+          <h1><b>GUEST FREE MOVEMENT MONITORING SYSTEM</b></h1>
+          <h2>Register GUEST</h2>
+      
+          <label for="Firstname" class="form-label">Firstname:</label>
+          <input type="text" class="form-control" id="Firstname" name="firstName" required>
+      
+          <label for="lastName" class="form-label">Lastname:</label>
+          <input type="text" class="form-control" id="Lastname" name="lastName" required>
+      
+          <label for="Telephone" class="form-label">Telephone:</label>
+          <input type="number" class="form-control" id="Telephone" name="telephone" required>
+      
+          <label for="National ID" class="form-label">National ID:</label>
+          <input type="number" class="form-control" id="ID" name="national_ID" required>
+      
+          <label for="Vehicle plate" class="form-label">Vehicle plate:</label>
+          <input type="text" class="form-control" id="vehicle" name="vehiclePlate" required>
+      
+          <div class="description-box">
+              <label for="Visiting purpose" class="form-label">Visiting purpose:</label><br>
+              <textarea id="Visiting purpose" rows="7" cols="30" placeholder="Enter your visiting purpose here" name="purpose"></textarea><br>
+      
+              <label for="Court No" class="form-label">Courtno:</label>
+              <input type="number" class="form-control" id="Courtno" name="courtNo" required>
+      
+              <label for="House No" class="form-label">Houseno:</label>
+              <input type="number" class="form-control" id="Houseno" name="houseNo" required>
+          </div>
+          
+          <br>
+          <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+      
+      
+      
+    </div>
+  </div>
+  </div>
+</div>
+</body>
+    </html>

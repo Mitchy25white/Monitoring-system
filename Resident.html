@@ -1,0 +1,103 @@
+<DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <title>GATED COMMUNITY GUEST FREE MOVEMENT MONITORING SYSTEM</title>
+</head>
+  
+    <body>
+
+      <script src="script.js"></script>
+      <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+  
+      }
+     
+    body {
+      background: url("download.gif") no-repeat; 
+      display: flex;
+      align-items: centre;
+      justify-content: center;
+      min-height: 100vh;
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .wrapper {
+    background: transparent;
+    border: 2px solid #010e1b;
+    color: #5AA5CD;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px #6F71A1;
+    width: 420px;
+    height: auto;
+    border-radius: 10px;
+    padding: 80px;
+    }
+    .wrapper h1 {
+font-size: 36px;
+text-align: center;
+}
+
+.wrapper .input-box{
+position: relative;
+width: 100%;
+height: 50px;
+margin: 30px 0;
+}
+.input-box input {
+width: 100%;
+height: 100%;
+background: transparent;
+border: none;
+outline: none;
+border: 2px solid #010e1b;
+border-radius: 40px;
+font-size: 16px;
+color: #0f101d;
+padding: 20px 45px;
+}
+    </style>
+    <div class="wrapper">
+      <form action="submitR.php" method="POST">
+              <h1><b>GUEST FREE MOVEMENT MONITORING SYSTEM</b></h1>
+<h2>Register Resident</h2>
+      
+        <label for="Firstname" class="form-label">Firstname:</label>
+        <input type="text" class="form-control" id="firstname" name="firstname" required>
+   
+        <label for="lastname" class="form-label">Lastname:</label>
+        <input type="text" class="form-control" id="lastname" name="lastname" required>
+     
+        <label for="telephone"class="form-label">Telephone:</label>
+        <input type="tel" class="form-control" id="telephone" name="telephone" required>
+    
+        <label for="ID"class="form-label">National ID :</label>
+        <input type="text" class="form-control" id="ID" name="ID" required>
+      
+        <label for="email" class="form-label">Email :</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      
+        <label for="courtno" class="form-label">Court No:</label>
+        <input type="number" class="form-control" id="courtno" name="courtno" required>
+  
+        <label for="houseno" class="form-label">House No:</label>
+        <input type="number" class="form-control" id="houseno" name="houseno" required>
+      </br>
+      <button type="submit" class="btn btn-primary">Register</button>
+</br>
+</form>
+      
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

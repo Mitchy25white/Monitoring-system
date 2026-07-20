@@ -1,0 +1,220 @@
+/* Main CSS for Admin Dashboard */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1a1a2e; /* Dark background */
+    color: #ffffff; /* White text */
+}
+
+/* Header Styles */
+header {
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    padding: 20px;
+    background-color: #16213e; /* Darker background for header */
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); /* Neon shadow */
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #e94560; /* Neon pink */
+    text-shadow: 0 0 10px #e94560, 0 0 20px #e94560; /* Neon glow */
+}
+.icn {
+    height: 50px;
+  }
+  .menu {
+    cursor: pointer;
+    font-size: 40px;
+    margin-left: 10px;
+    
+  }
+.menu:hover {
+    color: #e94560;
+    }
+
+.searchbar input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: #0f3460; /* Dark background for input */
+    color: #ffffff;
+}
+
+.searchbtn {
+    background-color: #e94560; /* Neon pink */
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+.searchbtn:hover {
+    background-color: #d83f5b; /* Darker pink on hover */
+}
+.message {
+    gap: 40px;
+    position: relative;
+    cursor: pointer;
+  }
+  .circle {
+    height: 7px;
+    width: 7px;
+    position: absolute;
+    background-color: #fa7bb4;
+    border-radius: 50%;
+    left: 19px;
+    top: 8px;
+  }
+  .dp {
+    height: 40px;
+    width: 40px;
+    background-color: #626262;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .dpicn {
+    height: 42px;
+  }
+
+/* Navigation Styles */
+.nav {
+    width: 250px;
+    background-color: #16213e; /* Dark background for nav */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); /* Neon shadow */
+}
+
+.nav-option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #e94560; /* Neon pink */
+    transition: background-color 0.3s;
+}
+
+.nav-option:hover {
+    background-color: rgba(233, 69, 96, 0.2); /* Light pink hover */
+    cursor: pointer;
+}
+
+.nav-option i {
+    margin-right: 10px;
+}
+
+/* Main Container */
+.main-container {
+    margin-left: 250px; /* Space for the nav */
+    padding: 20px;
+}
+
+/* Report Container */
+.report-container {
+    background-color: #0f3460; /* Dark background for report */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); /* Neon shadow */
+}
+
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.report-header h1 {
+    font-size: 24px;
+    color: #e94560; /* Neon pink */
+    text-shadow: 0 0 10px #e94560, 0 0 20px #e94560; /* Neon glow */
+}
+
+.report-body {
+    margin-top: 20px;
+}
+
+.report-topic-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff; /* White text */
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item1 {
+    background-color: #1a1a2e; /* Dark item background */
+    border: 1px solid #e94560; /* Neon pink border */
+    border-radius: 10px;
+    padding: 15px;
+    flex: 1;
+    min-width: 200px; /* Minimum width for items */
+    box-shadow: 0 0 10px rgba(233, 69, 96, 0.5); /* Neon glow */
+}
+
+.item1 h3 {
+    color: #e94560; /* Neon pink */
+}
+
+/* Button Styles */
+.view {
+    background-color: #e94560; /* Neon pink */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    }
+    .view:hover {
+        background-color: #ff69b4; /* Brighter neon pink */
+        }
+        /* Item Text Styles */
+.t-op {
+    font-size: 18px;
+    color: #ffffff; /* White text for item titles */
+}
+
+.t-op-nextlvl {
+    font-size: 16px;
+    color: #ffffff; /* White text for item details */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        width: 100%; /* Full width for nav on smaller screens */
+        height: auto; /* Auto height */
+        position: relative; /* Relative position */
+    }
+    
+    .main-container {
+        margin-left: 0; /* No margin on smaller screens */
+    }
+}

@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+
+  }
+ 
+body {
+    height: 100%;
+   background: url("/INDEX/CreateandLogin/createaccountpc.jpg") no-repeat center center;
+    background-size: cover;
+        background-attachment: fixed;
+    
+  
+}
+
+      .logo{
+        font-size: 40px;
+        color: #d1a6e0;
+        text-shadow: 0 0 15px #9b59b6, 0 0 30px #8e44ad; /* Neon glow effect */
+       user-select: none;
+       font-weight: 800;
+    }
+
+    footer {
+        background-color: rgba(38, 38, 38, 0.8); /* Semi-transparent dark footer */
+        color: #e0e0e0; /* Light gray text */
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+    
+.wrapper {
+    background: rgba(30, 30, 47, 0.9); /* Semi-transparent dark background */
+    border: 2px solid #9b59b6; /* Neon violet border */
+    color: #ecf0f1; /* Light text color */
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 20px #9b59b6; /* Neon glow effect */
+    width: 420px;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+.wrapper h1 {
+font-size: 36px;
+text-align: center;
+color: #9b59b6; /* Neon violet text */
+    text-shadow: 0 0 10px #9b59b6; /* Neon glow effect */
+}
+
+.wrapper .input-box{
+position: relative;
+width: 100%;
+height: 50px;
+margin: 30px 0;
+}
+.input-box input {
+width: 100%;
+height: 100%;
+background: transparent;
+border: none;
+outline: none;
+border: 2px solid #9b59b6;
+border-radius: 40px;
+font-size: 16px;
+color: #ecf0f1;
+padding: 20px 45px;
+transition: border-color 0.3s;
+}
+
+.input-box input::placeholder {
+color: rgb(236, 240, 241, 0.7);
+}
+.input-box input:focus {
+    border-color: #8e44ad; /* Darker violet on focus */
+    outline: none;
+}
+.input-box i {
+position: absolute;
+right: 20px;
+top: 50%;
+transform: translateY(-50%);
+font-size: 20px;
+color: #9b59b6;
+}
+
+.forgot{
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 14.5px;
+margin: -15px 0 15px;
+}
+.forgot a {
+    color: #9b59b6; /* Neon violet link color */
+}
+.forgot a:hover {
+text-decoration: underline;
+}
+
+.wrapper button {
+border: 1px solid #010e1b;
+outline: none;
+border-radius: 40px;
+background-image: linear-gradient(45deg, #d78df5, #5e0438);
+color: #ecf0f1;
+font-weight: 400;
+font-size: 16px;
+box-shadow: 0 0 10px #170020;
+display: block;
+
+}
+.wrapper button:hover {
+    background: #9b59b6; /* Lighter violet on hover */
+    box-shadow: 0 0 20px #9b59b6; /* Stronger glow on hover */
+}
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.input-box select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #9b59b6; /* Border color */
+    border-radius: 40px; /* Rounded corners */
+    background-color: #2c2c2c; /* Background color */
+    color: #ecf0f1; /* Text color */
+    font-size: 16px; /* Font size */
+    appearance: none; /* Remove default styling */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><polygon points="0,0 10,0 5,5" fill="%239b59b6"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow */
+    background-size: 12px; /* Size of the arrow */
+}
+
+.input-box select:hover {
+    border-color: #8e44ad; /* Change border color on hover */
+}
+
+.input-box select:focus {
+    outline: none; /* Remove outline */
+    border-color: #8e44ad; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(142, 68, 173, 0.5); /* Add shadow on focus */
+}
+    
+
+#password {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for comfort */
+    margin-bottom: 10px; /* Space below the input */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+/* Style for the checkbox and label */
+#showPassword {
+    margin-right: 5px; /* Space between checkbox and label */
+}
+
+.show-password-label {
+    font-size: 14px; /* Font size for the label */
+    color: #333; /* Dark text color */
+    cursor: pointer; /* Pointer cursor on hover */
+}
